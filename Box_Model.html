@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexBox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <style>
+        .container{
+            display: flex;
+            gap: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .navbar{
+            flex-direction: row;
+            background-color: lightgray;
+            padding: 10px;
+            gap: 20px;
+            padding: 40px;
+             
+        }
+        .navbar a{
+            color: rgb(180, 9, 9);
+            text-decoration: none;
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            background-color:gainsboro;    
+        }
+        .logo img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        p{
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+            }
+         ul{
+            list-style-type: square;
+            padding-left: 20px;
+            }
+         li{
+            margin-bottom: 10px;
+            font-size: 18px;
+        }    
+        #services{
+            margin-top: 20px;
+            margin-bottom: 20px; 
+            width: auto;
+            height: auto;
+            background-color: lightblue;
+            align-items: center;
+            justify-content: space-between;   
+        }
+        h2{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        #services ul{
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        #services li{
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .About{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<!-- navbar -->
+<body>
+    <div class="container">
+        <div class="logo"><img src="https://img.pikbest.com/png-images/20241029/digital-tech-logo-design-for-technology_11024427.png!w700wp" alt="Logo"></div>
+        <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Services</a>
+        <a href="#">Contact US</a>
+        </div>
+        <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <h2>About Us</h2>
+    <div class="About">
+    <img src="https://img.pikbest.com/png-images/20241029/digital-tech-logo-design-for-technology_11024427.png!w700wp" alt="Myphoto" style="width:200px;height:200px;">
+    <p>Hello! My name is Ayush Katiyar, and I am a MCA Student at ABES Engineeing College. I have a passion for Coding. In my free time, I enjoy workingout and listening to music. I created this webpage to share a bit about myself and connect with others who share similar interests. Feel free to explore the site and learn more about me!</p>
+    </div>
+    <h2>Services</h2>
+    <div class="Services">
+        <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">SEO Optimization</a></li>
+            <li><a href="#">Digital Marketing</a></li>
+            <li><a href="#">Content Creation</a></li>
+        </ul>
+    </div>
+</body>
+</html>
