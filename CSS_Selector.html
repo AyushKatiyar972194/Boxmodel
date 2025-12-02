@@ -9,11 +9,7 @@
             margin-left: 20px;
             border: 1px solid red;
         }
-    </style>
-</head>
-<html>
-<head>
-    <style>
+         
         /* decendant selector example: */
         div p {
             border: 1px solid red;
@@ -30,9 +26,42 @@
         h1~p {
             color: blue;
         }
+        /* attribute selector example: */
+        input[type] {
+            border: 2px solid black;
+        }
+        input[type="text"] {
+            background-color: yellow;
+        }
+        input[type="number"] {
+            background-color: blue;
+        }
+
+        a[href^="https"] {
+            color: green;
+        }
+
+         a[href*="example"] {
+            text-decoration: none;
+            font-size: 40px;
+            color: brown;
+            font-weight: bold;
+        }  
     </style>
+
 </head>
+<html>
 <body>
+    <!-- type selector -->
+    <a href="https://example.com/">This text is changed according to CSS</a>
+    <a href="https://otherlink.com">This text is not changed.</a>
+
+    <a href="https://abc.com/">Secure link</a>
+    <a href="http://xyz.com/">Non-secure link</a>
+
+    <!-- attribute selector -->
+    <input type="text" placeholder="Text input">
+    <input type="number" placeholder="Number input">
     <div>
         <!-- general sibling -->
         <h1>This is a heading</h1>
@@ -51,5 +80,4 @@
         </div>
     </div>
 </body>
-</html>
 </html>
