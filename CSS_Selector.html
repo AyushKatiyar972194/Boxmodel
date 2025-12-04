@@ -1,72 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        div>p {
-            margin-left: 20px;
-            border: 1px solid red;
-        }
-         
-        /* decendant selector example: */
-        div p {
-            border: 1px solid red;
-        }
-        /* child selector example: */
-        div>p {
-            margin-left: 20px;
-        }
-        /* sibling selector example: */
-        h1+p {
-            color: red;
-        }
-        /* general sibling selector example: */
-        h1~p {
-            color: blue;
-        }
-        /* attribute selector example: */
-        input[type] {
-            border: 2px solid black;
-        }
-        input[type="text"] {
-            background-color: yellow;
-        }
-        input[type="number"] {
-            background-color: blue;
-        }
+      div > p {
+        margin-left: 20px;
+        border: 1px solid red;
+      }
 
-        a[href^="https"] {
-            color: green;
-        }
-
-         a[href*="example"] {
-            text-decoration: none;
-            font-size: 40px;
-            color: brown;
-            font-weight: bold;
-        }  
+      /* decendant selector example: */
+      div p {
+        border: 1px solid red;
+      }
+      /* child selector example: */
+      div > p {
+        margin-left: 20px;
+      }
+      /* sibling selector example: */
+      h1 + p {
+        color: red;
+      }
+      /* general sibling selector example: */
+      h1 ~ p {
+        color: blue;
+      }
+      /* attribute selector example: */
+      input[type] {
+        border: 2px solid black;
+      }
+      input[type="text"] {
+        background-color: yellow;
+      }
+      input[type="number"] {
+        background-color: blue;
+      }
+      /* pseudo-class selector example: */
+      a[href^="https"] {
+        color: green;
+      }
+      /* pseudo-class selector example: */
+      a[href*="example"] {
+        text-decoration: none;
+        font-size: 40px;
+        color: brown;
+        font-weight: bold;
+      }
+      button {
+        background-color: lightgray;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
+      /* pseudo-class selector example: */
+      button:hover {
+        background-color: lightgreen;
+        cursor: pointer;
+      }
+      button:active {
+        background-color: orange;
+      }
+      button:focus {
+        border: 2px solid blue;
+      }
+      /* first child selector example: */
+      p:first-child {
+        font-weight: bold;
+      }
+      /* not selector example: */
+      p:not(.one) {
+        color: blueviolet;
+      }
+      /* pseudo-element selector example: */
+      p.one::first-line {
+        font-size: 150%;
+        color: orange;
+      }
+      /* pseudo-element selector example: */
+      p.two::first-letter {
+        font-size: 200%;
+        color: purple;
+      }
+      /* pseudo-element selector example: */
+      p.one::after {
+        content: " - This is added using ::after pseudo-element";
+        color: gray;
+        font-size: 12px;
+      }
+      /* pseudo-element selector example: */
+      p.two::before {
+        content: "Note: ";
+        color: red;
+        font-weight: bold;
+      }
+      /* pseudo-element selector example: */
+      input::placeholder {
+        font-size: 12px;
+        font-weight: bold;
+        color: red;
+      }
     </style>
+  </head>
+  <html>
+    <body>
+      <p class="one">This is a paragraph</p>
+      <p class="two">This is another paragraph</p>
+      <div>
+        <p>This is a paragraph</p>
+        <p>This is another paragraph</p>
+      </div>
+      <!-- type selector -->
+      <a href="https://example.com/">This text is changed according to CSS</a>
+      <a href="https://otherlink.com">This text is not changed.</a>
 
-</head>
-<html>
-<body>
-    <!-- type selector -->
-    <a href="https://example.com/">This text is changed according to CSS</a>
-    <a href="https://otherlink.com">This text is not changed.</a>
+      <a href="https://abc.com/">Secure link</a>
+      <a href="http://xyz.com/">Non-secure link</a>
 
-    <a href="https://abc.com/">Secure link</a>
-    <a href="http://xyz.com/">Non-secure link</a>
-
-    <!-- attribute selector -->
-    <input type="text" placeholder="Text input">
-    <input type="number" placeholder="Number input">
-    <div>
+      <!-- attribute selector -->
+      <input type="text" placeholder="Text input" />
+      <input type="number" placeholder="Number input" />
+      <div>
         <!-- general sibling -->
         <h1>This is a heading</h1>
         <p>Yellow</p>
-        <p>Blue</p>    
+        <p>Blue</p>
         <!-- Adjacent sibling -->
         <h1>This is a heading</h1>
         <p>Red</p>
@@ -78,6 +137,8 @@
             <p>This is not a direct child.</p>
           </section>
         </div>
-    </div>
-</body>
+      </div>
+      <button>Click</button>
+    </body>
+  </html>
 </html>
